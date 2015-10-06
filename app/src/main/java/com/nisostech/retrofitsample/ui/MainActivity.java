@@ -1,24 +1,23 @@
-package com.nisostech.retrofitsample.activity;
+package com.nisostech.retrofitsample.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import com.nisostech.retrofitsample.R;
+import com.nisostech.retrofitsample.models.UserVo;
 import com.nisostech.retrofitsample.network.Responses.LoginResponse;
 import com.nisostech.retrofitsample.network.RestCallback;
 import com.nisostech.retrofitsample.network.RestClient;
 import com.nisostech.retrofitsample.network.RestError;
-import com.nisostech.retrofitsample.vos.UserVo;
+import retrofit.client.Response;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
-import retrofit.client.Response;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -26,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
     private EditText login_editText_userName;
     private EditText login_editText_password;
     private UserVo model;
-    private Button login_button;
+    private Button mGithubButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +33,25 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         login_editText_userName = (EditText) findViewById(R.id.login_editText_userName);
         login_editText_password = (EditText) findViewById(R.id.login_editText_password);
-        login_button = (Button) findViewById(R.id.login_button);
+        mGithubButton = (Button) findViewById(R.id.github_btn);
         model = new UserVo();
         model.setPassword(login_editText_password.getText().toString());
         model.setUsername(login_editText_userName.getText().toString());
-        login_button.setOnClickListener(new View.OnClickListener() {
+
+
+        mGithubButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                doLogin();
+                goGithub();
             }
         });
+    }
+
+    public void goGithub() {
+        final Intent intent = new Intent(this, GithubActivity.class);
+//        String message = editText.getText().toString();
+//        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 
 /*

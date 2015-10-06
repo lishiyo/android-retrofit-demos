@@ -12,7 +12,7 @@ import retrofit.client.OkClient;
 
 public class RestClient {
 
-    private static Restapi REST_CLIENT;
+    private static RestAPI REST_CLIENT;
     private static String ROOT =
             "http://192.168.1.10/testapp";
 
@@ -21,7 +21,7 @@ public class RestClient {
         setupRestClient();
     }
 
-    public static Restapi get() {
+    public static RestAPI get() {
         return REST_CLIENT;
     }
 
@@ -35,6 +35,6 @@ public class RestClient {
                 .setRequestInterceptor(new SessionRequestInterceptor())
                 .build();
 
-        REST_CLIENT = restAdapter.create(Restapi.class);
+        REST_CLIENT = restAdapter.create(RestAPI.class);
     }
 }

@@ -1,4 +1,4 @@
-package com.nisostech.retrofitsample.vos;
+package com.nisostech.retrofitsample.models;
 
 
 import org.json.JSONException;

@@ -1,6 +1,6 @@
 package com.nisostech.retrofitsample.network.Responses;
 
-import com.nisostech.retrofitsample.vos.UserVo;
+import com.nisostech.retrofitsample.models.UserVo;
 
 import org.json.JSONException;
 import org.json.JSONObject;

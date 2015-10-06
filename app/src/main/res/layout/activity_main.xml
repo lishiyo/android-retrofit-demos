@@ -5,7 +5,6 @@
     android:background="@android:color/white"
     android:fillViewport="true">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,11 +48,11 @@
             android:layout_marginTop="40dp">
 
             <Button
-                android:id="@+id/login_button"
+                android:id="@+id/github_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight=".5"
-                android:text="login"
+                android:text="github"
                 android:textColor="@android:color/white" />
         </LinearLayout>
     </RelativeLayout>
