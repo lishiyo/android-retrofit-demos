@@ -11,25 +11,24 @@ import android.widget.TextView;
 import com.cziyeli.retrofitsample.R;
 import com.cziyeli.retrofitsample.models.GitRepo;
 
+import java.util.List;
 /**
  * Adapter setting GitRepo[] array to RecyclerView + CardView.
  */
 public class GitReposAdapter extends RecyclerView.Adapter<GitReposAdapter.RepoViewHolder> {
-	GitRepo[] mRepos;
+	List<GitRepo> mRepos;
 
-	public GitReposAdapter(GitRepo[] repos) {
+	public GitReposAdapter(List<GitRepo> repos) {
 		mRepos = repos;
 	}
 
-	public void updateRepos(GitRepo[] repos) {
-		Log.d("connie", "updateRepos!");
+	public void updateRepos(List<GitRepo> repos) {
 		mRepos = repos;
 		notifyDataSetChanged();
 	}
 
 	@Override
 	public RepoViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
-		Log.d("connie", "oncreateViewHolder!");
 		final View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.github_repo_item, parent, false);
 		RepoViewHolder viewholder = new RepoViewHolder(v);
 
@@ -38,16 +37,16 @@ public class GitReposAdapter extends RecyclerView.Adapter<GitReposAdapter.RepoVi
 
 	@Override
 	public void onBindViewHolder(RepoViewHolder holder, int position) {
-		final GitRepo repo = mRepos[position];
+		final GitRepo repo = mRepos.get(position);
 		holder.repoName.setText(repo.getName());
 		holder.repoDescription.setText(repo.getDescription());
 		// set avatar
-		Log.d("connie", "owner: " + repo.getOwner().toString());
+		Log.d("connie", "onBindViewHolder avatar url: " + repo.getOwner().getAvatarUrl());
 	}
 
 	@Override
 	public int getItemCount() {
-		return mRepos.length;
+		return mRepos.size();
 	}
 
 	@Override

@@ -20,7 +20,7 @@
 //        setupRestClient();
 //    }
 //
-//    public static RestAPI get() {
+//    public static RestAPI createService() {
 //        return REST_CLIENT;
 //    }
 //

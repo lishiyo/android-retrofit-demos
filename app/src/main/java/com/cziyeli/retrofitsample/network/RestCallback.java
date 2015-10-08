@@ -10,7 +10,7 @@ import retrofit.Retrofit;
  */
 
 public abstract class RestCallback<T> implements Callback<T> {
-    public abstract void failure(RestError restError);
+    public abstract void onFailure(RestError restError);
 
     @Override
     public void onResponse(Response<T> response, Retrofit retrofit) {

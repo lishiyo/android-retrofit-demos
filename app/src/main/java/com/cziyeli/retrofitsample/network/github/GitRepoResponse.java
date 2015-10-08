@@ -1,17 +1,19 @@
-package com.cziyeli.retrofitsample.models;
+package com.cziyeli.retrofitsample.network.github;
 
 import android.util.Log;
+import com.cziyeli.retrofitsample.models.GitRepo;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * array of { gitRepo }
  */
 public class GitRepoResponse {
-	GitRepo[] mGitRepos;
+	List<GitRepo> mGitRepos;
 
 	// public constructor is necessary for collections
 	public GitRepoResponse() {
@@ -24,11 +26,12 @@ public class GitRepoResponse {
 
 		Gson gson = new GsonBuilder().create();
 		GitRepo[] gitRepos = gson.fromJson(response, GitRepo[].class);
+
 		Log.d("connie", "got repos from gson: " + gitRepos.toString());
 		return gitRepos;
 	}
 
-	public void setGitRepos(GitRepo[] repos) {
+	public void setGitRepos(List<GitRepo> repos) {
 		mGitRepos = repos;
 	}
 

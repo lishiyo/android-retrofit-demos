@@ -48,7 +48,7 @@ public class MainActivity extends ActionBarActivity {
 * */
 
 //    public void doLogin() {
-//        RestClient.get().login(model, new RestCallback<LoginResponse>() {
+//        RestClient.createService().login(model, new RestCallback<LoginResponse>() {
 //            @Override
 //            public void success(LoginResponse loginResponse, Response response) {
 //                // success!

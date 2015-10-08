@@ -79,16 +79,17 @@ public class GitRepo {
 			this.avatar_url = avatar_url;
 		}
 
-		public static GitOwner createOwner(){ // lishiyo
-			return new GitRepo.GitOwner(7489058, "https://avatars.githubusercontent.com/u/7489058?v=3");
-		}
-
 		public int getId() {
 			return id;
 		}
 
 		public String getAvatarUrl() {
 			return avatar_url;
+		}
+
+		// dummy owner
+		public static GitOwner createOwner(){ // lishiyo
+			return new GitRepo.GitOwner(7489058, "https://avatars.githubusercontent.com/u/7489058?v=3");
 		}
 	}
 }
