@@ -1,7 +1,7 @@
-package com.nisostech.retrofitsample.network;
+package com.cziyeli.retrofitsample.network;
 
-import com.nisostech.retrofitsample.network.Responses.LoginResponse;
-import com.nisostech.retrofitsample.models.UserVo;
+import com.cziyeli.retrofitsample.network.Responses.LoginResponse;
+import com.cziyeli.retrofitsample.models.UserVo;
 
 import retrofit.http.Body;
 import retrofit.http.POST;

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "com.example.nisos_admin.retrofitsample"
+        applicationId "com.cziyeli.retrofitsample"
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
@@ -26,8 +26,10 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
     compile 'com.squareup.okhttp:okhttp:2.5.0'
     compile 'com.google.code.gson:gson:2.4'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    compile 'com.squareup.moshi:moshi:1.0.0'
+    compile 'com.squareup.retrofit:converter-moshi:2.0.0-beta1'
     compile 'com.android.support:cardview-v7:21.0.+'
     compile 'com.android.support:recyclerview-v7:21.0.+'
-
 }
 

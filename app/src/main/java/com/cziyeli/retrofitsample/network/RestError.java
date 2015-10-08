@@ -1,4 +1,4 @@
-package com.nisostech.retrofitsample.network;
+package com.cziyeli.retrofitsample.network;
 
 import org.json.JSONException;
 import org.json.JSONObject;

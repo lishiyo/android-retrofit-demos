@@ -1,4 +1,4 @@
-package com.nisostech.retrofitsample;
+package com.cziyeli.retrofitsample;
 
 /**
  * Created by connieli on 10/5/15.
