@@ -9,8 +9,8 @@ import retrofit.Retrofit;
 public class GitHubClient {
 	private static GitHubAPI API_CLIENT;
     private static String ROOT = "https://api.github.com";
-	// Types
-	public static final int GIT_USER_REPOS = 0;
+
+	public static final int GIT_USER_REPOS = 0; // GET user/:username/repos
 
 	public static GitHubAPI createService() {
 		return API_CLIENT;

@@ -1,6 +1,5 @@
 package com.cziyeli.retrofitsample.network.github;
 
-import android.util.Log;
 import com.cziyeli.retrofitsample.models.GitRepo;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -27,7 +26,6 @@ public class GitRepoResponse {
 		Gson gson = new GsonBuilder().create();
 		GitRepo[] gitRepos = gson.fromJson(response, GitRepo[].class);
 
-		Log.d("connie", "got repos from gson: " + gitRepos.toString());
 		return gitRepos;
 	}
 

@@ -10,7 +10,7 @@ import com.cziyeli.retrofitsample.R;
 import com.cziyeli.retrofitsample.models.UserVo;
 
 
-public class MainActivity extends ActionBarActivity {
+public class RestActivity extends ActionBarActivity {
 
     private EditText login_editText_userName;
     private EditText login_editText_password;
@@ -20,7 +20,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rest);
         login_editText_userName = (EditText) findViewById(R.id.login_editText_userName);
         login_editText_password = (EditText) findViewById(R.id.login_editText_password);
         mGithubButton = (Button) findViewById(R.id.github_btn);

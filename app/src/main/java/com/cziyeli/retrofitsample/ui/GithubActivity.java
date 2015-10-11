@@ -1,7 +1,7 @@
 package com.cziyeli.retrofitsample.ui;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -30,7 +30,7 @@ import java.util.List;
  * OkHTTP + GSON with Github API
  * See: https://github.com/codepath/android_guides/wiki/Using-OkHttp
  */
-public class GithubActivity extends ActionBarActivity {
+public class GithubActivity extends AppCompatActivity {
 	EditText mSearchInput;
 	RecyclerView mRecView;
 	Button mSearchUsers;

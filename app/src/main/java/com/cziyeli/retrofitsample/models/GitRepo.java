@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Github Repo for a User
+ * GSON
  * GET /users/:username/repos
  */
 
